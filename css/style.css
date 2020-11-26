@@ -102,6 +102,8 @@ header .link {
 }
 /* ====================== header address ============================ */
 .header-address {
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   font-weight: 500;
   font-size: 14px;
 
@@ -110,19 +112,22 @@ header .link {
 .header-address:not(:last-child) {
   margin-right: 30px;
 }
+.header-address:hover,
+.header-address:focus {
+  cursor: pointer;
+  color: var(--accent-color);
+}
 .header-address-svg {
+  /* transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+
   margin-right: 10px;
 
   width: 16px;
   height: 12px;
   fill: #757575;
 }
-.header-address:hover,
-.header-address:focus {
-  color: var(--accent-color);
-}
-.header-address:hover use,
-.header-address:focus use {
+.header-address:hover .header-address-svg,
+.header-address:focus .header-address-svg {
   cursor: pointer;
   fill: var(--accent-color);
 }
